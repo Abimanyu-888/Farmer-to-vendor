@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm-to-Vendor Direct</title>
+    <link href="static/css/home.css" rel="stylesheet" >
+</head>
+<body>
+    <header>
+        <h1>Farm-to-Vendor Direct Platform</h1>
+        <p>A C++ Data Structures Project Demonstrator</p>
+    </header>
+    <main>
+        <section id="products-section">
+            <h2>Available Produce</h2>
+            <button id="load-products-btn">Load All Products</button>
+            <div id="products-container">
+                </div>
+        </section>
+
+        <div class="form-container">
+            <section id="user-section">
+                <h2>User Registration</h2>
+                <form id="register-form">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <select id="role" name="role" required>
+                        <option value="" disabled selected>Select Role...</option>
+                        <option value="VENDOR">Vendor</option>
+                        <option value="FARMER">Farmer</option>
+                    </select>
+                    <button type="submit">Register</button>
+                </form>
+            </section>
+
+            <section id="order-section">
+                <h2>Place an Order</h2>
+                <form id="order-form">
+                    <input type="text" id="vendorId" name="vendorId" placeholder="Your User ID" required>
+                    <input type="text" id="productId" name="productId" placeholder="Product ID from list" required>
+                    <input type="number" id="quantity" name="quantity" placeholder="Quantity" min="1" required>
+                    <button type="submit">Place Order</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>API interactions are logged in the browser's developer console.</p>
+    </footer>
+    <script src="/static/js/home.js"></script>
+</body>
+</html>
