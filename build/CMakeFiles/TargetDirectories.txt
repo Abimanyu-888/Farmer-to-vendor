@@ -1,0 +1,3 @@
+/Users/macbookm2/Downloads/programming/projects/Farmer-to-vendor/build/CMakeFiles/dsa_project.dir
+/Users/macbookm2/Downloads/programming/projects/Farmer-to-vendor/build/CMakeFiles/edit_cache.dir
+/Users/macbookm2/Downloads/programming/projects/Farmer-to-vendor/build/CMakeFiles/rebuild_cache.dir
