@@ -5,10 +5,14 @@
 int main()
 {
     crow::mustache::set_base("templates");
+
     crow::SimpleApp app;
     CROW_ROUTE(app, "/")([](){
-        auto page = crow::mustache::load_text("home.html");
+        crow::mustache::context ctx;
+        ctx["page_title"] = "sign_in";
+        auto page = crow::mustache::load("sign_in.html").render(ctx);
         return page;
     });
+
     app.port(18080).multithreaded().run();
 }
