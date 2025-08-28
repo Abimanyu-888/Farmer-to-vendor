@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign_up - FarmConnect</title>
+    <link rel="stylesheet" href="/static/css/sign_in.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="info-panel">
+            <div class="overlay"></div>
+            <div class="info-content">
+                <h1>Welcome to FarmConnect</h1>
+                <p>
+                    Connecting farmers directly to the market. Get fresh produce straight from the source, empower local agriculture, and reduce food waste.
+                </p>
+            </div>
+        </div>
+
+        <div class="login-panel">
+
+            <div class="login-form-container">
+                <h2>Sign Up To FarmConnect</h2>
+                <p class="subtitle">Enter your credentials to create your account.</p>
+
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="Name"  required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username"  minlength="8" title="Must contain at least 8 characters" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="type">Who are you </label>
+                        <select required>
+                            <option value=""disabled selected>-- None --</option>
+                            <option value="Farmer">I'm a Farmer</option>
+                            <option value="Buyer">I'm a Buyer</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="password">Password</label>
+                        </div>
+                        <input type="password" id="password" name="password" placeholder="••••••••" minlength="8" maxlength="20" title="Must contain at least 8 characters"required>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="Confirm_password">Confirm Password</label>
+                        </div>
+                        <input type="password" id="Confirm_password" name="password" placeholder="••••••••" required>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="submit-btn">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+                 
+    </div>
+</body>    
+<script>
+document.querySelector("form").addEventListener("submit", function (e) {
+  const password = document.getElementById("password").value;
+  const confirm = document.getElementById("Confirm_password").value;
+
+  if (password !== confirm) {
+    e.preventDefault(); // stop form submission
+    alert("Passwords do not match!");
+  }
+});
+</script>

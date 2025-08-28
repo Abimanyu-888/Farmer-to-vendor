@@ -1,0 +1,18 @@
+[
+    {
+        "name": "abimanyu",
+        "username":"farmer001",
+        "email":"abhimanyuchoudhary@gmail.com",
+        "password":"abimanyu",
+        "products":["product001","product002"],
+        "orders":["order001"]
+    },
+    {
+        "name": "yuvraj",
+        "username":"farmer002",
+        "email":"yuvraj@gmail.com",
+        "password":"yuvraj01",
+        "products":["product003"],
+        "orders":["order002"]
+    }
+]

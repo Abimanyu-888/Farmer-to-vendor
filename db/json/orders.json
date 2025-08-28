@@ -1,0 +1,12 @@
+[
+    {
+        "order_id":"order001",
+        "product_id":"product002",
+        "quantaty":20
+    },
+    {
+        "order_id":"order002",
+        "product_id":"product003",
+        "quantaty":2
+    }
+]

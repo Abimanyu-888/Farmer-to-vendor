@@ -1,0 +1,33 @@
+[
+    {
+        "product_id":"product001",
+        "name":"mango",
+        "category":"fruit",
+        "owner":"farmer001",
+        "price":50,
+        "stock":120,
+        "unit":"kg",
+        "about":"Fresh"
+    },
+    {
+        "id":"product002",
+        "name":"apple",
+        "category":"fruit",
+        "owner":"farmer001",
+        "price":250,
+        "stock":120,
+        "unit":"kg",
+        "about":"Fresh"
+
+    },
+    {
+        "id":"product003",
+        "name":"mango",
+        "category":"fruit",
+        "owner":"farmer002",
+        "price":40,
+        "stock":12,
+        "unit":"kg",
+        "about":"Fresh"
+    }
+]

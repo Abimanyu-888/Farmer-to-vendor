@@ -1,0 +1,16 @@
+[
+    {
+        "name": "abimanyu",
+        "username":"buyer001",
+        "email":"abhimanyuchoudhary@gmail.com",
+        "password":"abimanyu",
+        "orders":["order001"]
+    },
+    {
+        "name": "yuvraj",
+        "username":"buyer002",
+        "email":"yuvraj@gmail.com",
+        "password":"yuvraj01",
+        "orders":["order002"]
+    }
+]
