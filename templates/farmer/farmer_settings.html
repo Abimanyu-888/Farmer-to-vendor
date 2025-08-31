@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmConnect - Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/farmer/settings.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="#" class="logo">
+                    <span class="logo-text">FarmConnect</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="farmer_dashboard.html" class="nav-link">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>
+                    Dashboard
+                </a>
+                <a href="farmer_products.html" class="nav-link">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" /></svg>
+                    My Products
+                </a>
+                <a href="farmer_orders.html" class="nav-link">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" /></svg>
+                    Orders
+                </a>
+                <a href="#" class="nav-link active">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>
+                    Settings
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="content-wrapper content-sm">
+                <header class="header">
+                    <div class="header-text">
+                        <h1 class="header-title">Settings</h1>
+                        <p class="header-subtitle">Manage your account and notification preferences.</p>
+                    </div>
+                </header>
+
+                <div class="settings-panel">
+                    <div class="settings-section">
+                        <h2 class="section-title">Profile Information</h2>
+                        <p class="section-description">Update your personal and farm details.</p>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" id="fullName" value="John Farmer" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="farmName" class="form-label">Farm Name</label>
+                                <input type="text" id="farmName" value="Green Valley Farms" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" value="john.farmer@example.com" class="form-input" disabled>
+                            </div>
+                             <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" value="+1 (555) 123-4567" class="form-input">
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="settings-section">
+                        <h2 class="section-title">Change Password</h2>
+                        <div class="form-grid">
+                             <div class="form-group">
+                                <label for="currentPassword" class="form-label">Current Password</label>
+                                <input type="password" id="currentPassword" class="form-input">
+                            </div>
+                             <div class="form-group">
+                                <label for="newPassword" class="form-label">New Password</label>
+                                <input type="password" id="newPassword" class="form-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section no-border">
+                         <h2 class="section-title">Notifications</h2>
+                         <p class="section-description">Choose how you want to be notified.</p>
+                         <div class="notification-list">
+                            <div class="notification-item">
+                                <div class="notification-text">
+                                    <h3>New Orders</h3>
+                                    <p>Get notified when a new order is placed.</p>
+                                </div>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="toggle1" class="toggle-checkbox" checked/>
+                                    <label for="toggle1" class="toggle-label"></label>
+                                </div>
+                            </div>
+                             <div class="notification-item">
+                                <div class="notification-text">
+                                    <h3>Low Stock Alerts</h3>
+                                    <p>Get notified when a product's stock is low.</p>
+                                </div>
+                                 <div class="toggle-switch">
+                                    <input type="checkbox" id="toggle2" class="toggle-checkbox" checked/>
+                                    <label for="toggle2" class="toggle-label"></label>
+                                </div>
+                            </div>
+                              <div class="notification-item">
+                                <div class="notification-text">
+                                    <h3>Weekly Summary</h3>
+                                    <p>Receive a weekly performance report.</p>
+                                </div>
+                                 <div class="toggle-switch">
+                                    <input type="checkbox" id="toggle3" class="toggle-checkbox"/>
+                                    <label for="toggle3" class="toggle-label"></label>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+                    <div class="settings-footer">
+                        <button class="btn btn-secondary">Cancel</button>
+                        <button class="btn btn-primary">Save Changes</button>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

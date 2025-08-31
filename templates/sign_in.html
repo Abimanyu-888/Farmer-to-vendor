@@ -27,10 +27,19 @@
                 <h2>Member Login</h2>
                 <p class="subtitle">Enter your credentials to access your account.</p>
 
-                <form action="#" method="POST">
+                <form action="sign_in_post" method="POST">
                     <div class="form-group">
-                        <label for="email">Email Address</label>
+                        <label for="email">Email Address </label>
                         <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="type">Who are you </label>
+                        <select name="type" required>
+                            <option value=""disabled selected>-- None --</option>
+                            <option value="Farmer">I'm a Farmer</option>
+                            <option value="Buyer">I'm a Buyer</option>
+                        </select>
                     </div>
 
                     <div class="form-group">

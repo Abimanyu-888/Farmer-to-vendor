@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmConnect - My Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/farmer/products.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="#" class="logo">
+                    <span class="logo-text">FarmConnect</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="farmer_dashboard.html" class="nav-link">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>
+                    Dashboard
+                </a>
+                <a href="#" class="nav-link active">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" /></svg>
+                    My Products
+                </a>
+                <a href="farmer_orders.html" class="nav-link">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" /></svg>
+                    Orders
+                </a>
+                <a href="farmer_settings.html" class="nav-link">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>
+                    Settings
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="content-wrapper">
+                <header class="header">
+                    <div class="header-text">
+                        <h1 class="header-title">My Products</h1>
+                        <p class="header-subtitle">Manage your crop listings, inventory, and prices.</p>
+                    </div>
+                    <div class="header-action">
+                        <a href="add_product.html" class="btn btn-primary">
+                            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+                            Add New Product
+                        </a>
+                    </div>
+                </header>
+
+                <div class="product-grid">
+                    
+                    <div class="product-card">
+                        <img class="product-card-img" src="https://placehold.co/400x300/a3e635/ffffff?text=Tomatoes" alt="Tomatoes" onerror="this.onerror=null;this.src='https://placehold.co/400x300/fecaca/991b1b?text=Image+Failed';">
+                        <div class="product-card-body">
+                            <div class="product-card-header">
+                                <h3 class="product-card-title">Heirloom Tomatoes</h3>
+                                <span class="status-badge status-active">Active</span>
+                            </div>
+                            <p class="product-card-category">Vegetable</p>
+                            <p class="product-card-price">$2.99 / kg</p>
+                            <p class="product-card-stock">Stock: <span class="font-semibold">450 kg</span> remaining</p>
+                            <div class="product-card-actions">
+                                <button class="card-action-btn">Edit</button>
+                                <button class="card-action-btn btn-delete">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img class="product-card-img" src="https://placehold.co/400x300/f59e0b/ffffff?text=Carrots" alt="Carrots" onerror="this.onerror=null;this.src='https://placehold.co/400x300/fecaca/991b1b?text=Image+Failed';">
+                        <div class="product-card-body">
+                            <div class="product-card-header">
+                                <h3 class="product-card-title">Organic Carrots</h3>
+                                <span class="status-badge status-active">Active</span>
+                            </div>
+                            <p class="product-card-category">Root Vegetable</p>
+                            <p class="product-card-price">$1.50 / kg</p>
+                            <p class="product-card-stock">Stock: <span class="font-semibold">850 kg</span> remaining</p>
+                            <div class="product-card-actions">
+                                <button class="card-action-btn">Edit</button>
+                                <button class="card-action-btn btn-delete">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card is-out-of-stock">
+                        <div class="out-of-stock-overlay">
+                            <span>Out of Stock</span>
+                        </div>
+                        <img class="product-card-img" src="https://placehold.co/400x300/86efac/ffffff?text=Lettuce" alt="Lettuce" onerror="this.onerror=null;this.src='https://placehold.co/400x300/fecaca/991b1b?text=Image+Failed';">
+                        <div class="product-card-body">
+                            <div class="product-card-header">
+                                <h3 class="product-card-title">Organic Lettuce</h3>
+                                <span class="status-badge status-inactive">Inactive</span>
+                            </div>
+                            <p class="product-card-category">Leafy Green</p>
+                            <p class="product-card-price">$4.00 / unit</p>
+                            <p class="product-card-stock">Stock: <span class="font-semibold text-red">0 units</span> remaining</p>
+                            <div class="product-card-actions">
+                                <button class="card-action-btn">Edit</button>
+                                <button class="card-action-btn btn-delete">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img class="product-card-img" src="https://placehold.co/400x300/fde047/ffffff?text=Potatoes" alt="Potatoes" onerror="this.onerror=null;this.src='https://placehold.co/400x300/fecaca/991b1b?text=Image+Failed';">
+                        <div class="product-card-body">
+                            <div class="product-card-header">
+                                <h3 class="product-card-title">Yukon Gold Potatoes</h3>
+                                <span class="status-badge status-active">Active</span>
+                            </div>
+                            <p class="product-card-category">Tuber</p>
+                            <p class="product-card-price">$0.99 / kg</p>
+                            <p class="product-card-stock">Stock: <span class="font-semibold">1200 kg</span> remaining</p>
+                           <div class="product-card-actions">
+                                <button class="card-action-btn">Edit</button>
+                                <button class="card-action-btn btn-delete">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

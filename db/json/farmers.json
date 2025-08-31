@@ -2,7 +2,8 @@
     {
         "name": "abimanyu",
         "username":"farmer001",
-        "email":"abhimanyuchoudhary@gmail.com",
+        "farm_name":"green vally farm",
+        "email":"farmer1@gmail.com",
         "password":"abimanyu",
         "products":["product001","product002"],
         "orders":["order001"]
@@ -10,8 +11,9 @@
     {
         "name": "yuvraj",
         "username":"farmer002",
-        "email":"yuvraj@gmail.com",
-        "password":"yuvraj01",
+        "farm_name":"green vally farm",
+        "email":"farmer2@gmail.com",
+        "password":"abimanyu",
         "products":["product003"],
         "orders":["order002"]
     }

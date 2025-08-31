@@ -1,7 +1,7 @@
 [
     {
         "product_id":"product001",
-        "name":"mango",
+        "product_name":"mango",
         "category":"fruit",
         "owner":"farmer001",
         "price":50,
@@ -10,8 +10,8 @@
         "about":"Fresh"
     },
     {
-        "id":"product002",
-        "name":"apple",
+        "product_id":"product002",
+        "product_name":"apple",
         "category":"fruit",
         "owner":"farmer001",
         "price":250,
@@ -21,8 +21,8 @@
 
     },
     {
-        "id":"product003",
-        "name":"mango",
+        "product_id":"product003",
+        "product_name":"mango",
         "category":"fruit",
         "owner":"farmer002",
         "price":40,
