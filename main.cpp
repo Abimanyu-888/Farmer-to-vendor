@@ -64,15 +64,18 @@ int main()
         std::string username=req_body.get("username");
         std::string email=req_body.get("email");
         std::string pass=req_body.get("password");
+        std::string state=req_body.get("state");
         std::string type=req_body.get("type");
+        
         if(type=="Farmer"){
-            farmer_data* new_user=new farmer_data(name,username,email,pass);
+            std::string farmname=req_body.get("farm_name");
+            farmer_data* new_user=new farmer_data(name,username,email,pass,farmname,state);
             tables.addFarmer(new_user);
             auto page=crow::mustache::load("farmer.html");
             return crow::response(page.render());
         }
         else{
-            buyer_data* new_user=new buyer_data(name,username,email,pass);
+            buyer_data* new_user=new buyer_data(name,username,email,pass,state);
             tables.addBuyer(new_user);
             auto page=crow::mustache::load("buyer/buyer_home.html");
             return crow::response(page.render());

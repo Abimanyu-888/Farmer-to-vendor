@@ -7,7 +7,8 @@
         "password":"abimanyu",
         "products":["product001","product002"],
         "orders":["order001"],
-        "state":"tamilnadu"
+        "state":"tamilnadu",
+        "Total_Revenue":12000
     },
     {
         "name": "yuvraj",
@@ -17,6 +18,7 @@
         "password":"abimanyu",
         "products":["product003"],
         "orders":["order002"],
-        "state":"rajasthan"
+        "state":"rajasthan",
+        "Total_Revenue":12500
     }
 ]

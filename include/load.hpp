@@ -12,15 +12,21 @@ struct farmer_data {
     std::string username;
     std::string email;
     std::string password;
+    std::string farm_name;
     std::vector<std::string> products;
     std::vector<std::string> orders;
     std::string state;
+    int Total_Revenue;
     
-    farmer_data(const std::string& thename,const std::string& theusername,const std::string& theemail,const std::string& thepassword):
+    farmer_data(const std::string& thename,const std::string& theusername,const std::string& theemail,const std::string& thepassword,const std::string& thefarm_name,const std::string& thestate,const int& theTotal_Revenue,const std::vector<std::string>& theproducts,conststd::vector<std::string>& theorders):
     name(thename),
     username(theusername),
     email(theemail), 
-    password(thepassword)
+    password(thepassword),
+    state(thestate),
+    Total_Revenue(theTotal_Revenue),
+    products(theproducts),
+    orders(theorders)
     {}
 };
 struct farmer_link{
@@ -34,13 +40,16 @@ struct buyer_data {
     std::string email;
     std::string password;
     std::vector<std::string> orders;
+    std::string state;
     
-    
-    buyer_data(const std::string& thename,const std::string& theusername,const std::string& theemail,const std::string& thepassword):
+    buyer_data(const std::string& thename,const std::string& theusername,const std::string& theemail,const std::string& thepassword,const std::string& thestate,const std::vector<std::string>& theorders):
     name(thename), 
     username(theusername),
     email(theemail),
-    password(thepassword){}
+    password(thepassword),
+    state(thestate),
+    orders(theorders)
+    {}
 };
 struct buyer_link{
     buyer_data* data=nullptr;
@@ -125,7 +134,7 @@ class hash_tables{
         file>>data;
         for(const auto& user:data){     
             uint32_t index=fnv1a(user["username"])%size;
-            farmer_data* new_user=new farmer_data(user["name"],user["username"],user["email"],user["password"]);
+            farmer_data* new_user=new farmer_data(user["name"],user["username"],user["email"],user["password"],user["farm_name"],user["state"],user["Total_Revenue"],user["products"].get<std::vector<std::string>>(),user["orders"].get<std::vector<std::string>>());
             farmer_link* newnode=new farmer_link;
             newnode->data=new_user;
             if(farmers[index]){
@@ -160,7 +169,7 @@ class hash_tables{
         file>>data;
         for(const auto& user:data){
             uint32_t index=fnv1a(user["username"])%size;
-            buyer_data* new_user=new buyer_data(user["name"],user["username"],user["email"],user["password"]);
+            buyer_data* new_user=new buyer_data(user["name"],user["username"],user["email"],user["password"],user["state"],user["orders"].get<std::vector<std::string>>());
             buyer_link* newnode=new buyer_link;
             newnode->data=new_user;
             if(buyers[index]){
