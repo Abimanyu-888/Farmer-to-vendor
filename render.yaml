@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: cpp-farmer-vendor
+    env: docker
+    plan: free # or your preferred plan
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 18080
