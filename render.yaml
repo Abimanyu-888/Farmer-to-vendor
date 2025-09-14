@@ -2,7 +2,9 @@ services:
   - type: web
     name: cpp-farmer-vendor
     env: docker
-    plan: free # or your preferred plan
+    plan: free
+    repo: https://github.com/Abimanyu-888/Farmer-to-vendor.git
+    branch: renderBranch # Add this line
     dockerfilePath: ./Dockerfile
     healthCheckPath: /
     envVars:
