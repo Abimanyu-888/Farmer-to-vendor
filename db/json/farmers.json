@@ -6,7 +6,8 @@
         "email":"farmer1@gmail.com",
         "password":"abimanyu",
         "products":["product001","product002"],
-        "orders":["order001"]
+        "orders":["order001"],
+        "state":"tamilnadu"
     },
     {
         "name": "yuvraj",
@@ -15,6 +16,7 @@
         "email":"farmer2@gmail.com",
         "password":"abimanyu",
         "products":["product003"],
-        "orders":["order002"]
+        "orders":["order002"],
+        "state":"rajasthan"
     }
 ]

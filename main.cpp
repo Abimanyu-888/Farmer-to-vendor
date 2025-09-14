@@ -25,28 +25,33 @@ int main()
         std::string type=req_body.get("type");
         std::string* user=tables.findUsername(email);
         if(user){
+            crow::mustache::context ctx;
+            ctx["username"]=*user;
             if(type=="Farmer"){
                 farmer_data* data=tables.findFarmer(*user);
                 if(data){
                     if(data->password==pass){
                         auto page=crow::mustache::load("farmer/farmer_dashboard.html");
-                        return crow::response(page.render());
+                        return crow::response(page.render(ctx));
                     }
                 }
-                return crow::response("NO such user");
+                auto page=crow::mustache::load("error.html");
+                return crow::response(page.render());
             }
             else if(type=="Buyer"){
                 buyer_data* data=tables.findBuyer(*user);
                 if(data){
                     if(data->password==pass){
                         auto page=crow::mustache::load("buyer/buyer_home.html");
-                        return crow::response(page.render());
+                        return crow::response(page.render(ctx));
                     }
                 }
-                return crow::response("NO such user");
+                auto page=crow::mustache::load("error.html");
+                return crow::response(page.render());
             }
         }
-        return crow::response("NO such user");
+        auto page=crow::mustache::load("error.html");
+        return crow::response(page.render());
         
     });
     CROW_ROUTE(app, "/sign_up")([](){

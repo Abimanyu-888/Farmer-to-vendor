@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmConnect - Fresh Tomatoes</title>
+    <link rel="stylesheet" href="/static/css/buyer/product.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <a href="#">FarmConnect</a>
+                </div>
+                <div class="search-container">
+                    <div class="search-wrapper">
+                        <input type="search" placeholder="Search for fresh produce..." class="search-input">
+                        <div class="search-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <a href="#" class="header-icon">
+                        <i class="fas fa-shopping-cart fa-lg"></i>
+                    </a>
+                    <a href="#" class="header-icon">
+                        <i class="fas fa-user-circle fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-links">
+                    <a href="#">All Products</a>
+                    <a href="#">Fresh Vegetables</a>
+                    <a href="#">Fruits</a>
+                    <a href="#">Dairy & Eggs</a>
+                    <a href="#">Grains</a>
+                    <a href="#">Organic</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container page-content">
+        
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="#">Home</a><i class="fas fa-angle-right separator"></i></li>
+                <li><a href="#">Vegetables</a><i class="fas fa-angle-right separator"></i></li>
+                <li>Fresh Tomatoes</li>
+            </ol>
+        </nav>
+
+        <div class="card">
+            <div class="product-layout">
+                <div class="product-gallery">
+                    <img id="main-product-image" src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?q=80&w=1887&auto=format&fit=crop" alt="Tomatoes" class="main-image">
+                    <div class="thumbnail-container">
+                        <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?q=80&w=1887&auto=format&fit=crop" alt="Thumbnail 1" class="thumbnail active">
+                        <img src="https://images.unsplash.com/photo-1561138723-16a12270a049?q=80&w=1887&auto=format&fit=crop" alt="Thumbnail 2" class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1588661644349-74012508535a?q=80&w=1887&auto=format&fit=crop" alt="Thumbnail 3" class="thumbnail">
+                    </div>
+                </div>
+
+                <div class="product-details">
+                    <h1 class="product-title">Fresh Tomatoes</h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <a href="#reviews" class="review-link">12 Reviews</a>
+                    </div>
+                    <p class="product-seller">Sold by <a href="#">Green Valley Farms</a></p>
+                    
+                    <p class="product-price">$2.99/lb</p>
+                    
+                    <p class="product-short-description">Vine-ripened and hand-picked at the peak of freshness. Grown using sustainable, organic methods, they are bursting with flavor and perfect for any dish.</p>
+
+                    <div class="product-tags">
+                        <span class="tag organic-tag">Organic</span>
+                        <span class="tag pesticide-tag">Pesticide-Free</span>
+                    </div>
+
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantity:</label>
+                        <div class="quantity-input">
+                            <button>-</button>
+                            <input type="text" id="quantity" value="1">
+                            <button>+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                         <button class="btn btn-wishlist">
+                            <i class="fas fa-heart fa-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card info-tabs">
+            <div class="tab-header">
+                <nav class="tab-nav">
+                    <a href="#" class="tab-link tab-active">Description</a>
+                    <a href="#" class="tab-link">Farmer Info</a>
+                    <a href="#" id="reviews" class="tab-link">Reviews</a>
+                </nav>
+            </div>
+            <div class="tab-body">
+                <div class="tab-content" id="description-content">
+                    <p>Our tomatoes are cultivated in the nutrient-rich soils of Green Valley, ensuring a superior taste and quality. We follow strict organic farming practices, avoiding all synthetic pesticides and fertilizers. Each tomato is hand-selected to guarantee it meets our high standards for ripeness and flavor. They are ideal for fresh salads, robust pasta sauces, or as a simple, healthy snack.</p>
+                </div>
+                <div class="tab-content hidden" id="farmer-content">
+                    <p>Green Valley Farms has been a family-owned operation for over three generations. We are committed to sustainable agriculture and providing our community with the freshest, healthiest produce possible. We believe in transparency and a direct connection between the farm and your table.</p>
+                </div>
+                 <div class="tab-content hidden" id="reviews-content">
+                    <p>See what our customers have to say!</p>
+                </div>
+            </div>
+        </div>
+        
+        <section class="related-products">
+            <h2 class="section-title">You Might Also Like</h2>
+            <div class="product-grid">
+                <p class="placeholder-text">Related product cards would go here.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer-bottom">
+        </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Image Gallery Logic
+            const mainImage = document.getElementById('main-product-image');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    mainImage.src = this.src;
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Tab Logic
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabLinks.forEach((link, index) => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    tabLinks.forEach(l => l.classList.remove('tab-active'));
+                    link.classList.add('tab-active');
+                    
+                    tabContents.forEach(content => content.classList.add('hidden'));
+                    // We target by index as the IDs are not guaranteed to match the order
+                    tabContents[index].classList.remove('hidden');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

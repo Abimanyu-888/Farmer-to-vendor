@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmConnect - Shopping Cart</title>
+    <link rel="stylesheet" href="/static/css/buyer/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="#" class="logo">FarmConnect</a>
+            </div>
+
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <input type="search" placeholder="Search for fresh produce..." class="search-input">
+                    <div class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <a href="#" class="action-link cart-icon">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                </a>
+                <a href="#" class="action-link user-icon">
+                    <i class="fas fa-user-circle fa-lg"></i>
+                </a>
+            </div>
+        </div>
+        
+        <nav class="secondary-nav">
+            <div class="container">
+                <div class="nav-links">
+                    <a href="#">All Products</a>
+                    <a href="#">Fresh Vegetables</a>
+                    <a href="#">Fruits</a>
+                    <a href="#">Dairy & Eggs</a>
+                    <a href="#">Grains</a>
+                    <a href="#">Organic</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container main-content">
+        <div class="card">
+            <h1 class="main-heading">Your Shopping Cart</h1>
+            
+            <div class="cart-layout">
+                
+                <div class="cart-items-section">
+                    <div class="cart-header">
+                        <div class="header-product">Product</div>
+                        <div class="header-price">Price</div>
+                        <div class="header-quantity">Quantity</div>
+                        <div class="header-total">Total</div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="product-details">
+                            <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?q=80&w=1887&auto=format&fit=crop" alt="Tomatoes" class="product-image">
+                            <div>
+                                <h3 class="product-name">Fresh Tomatoes</h3>
+                                <p class="product-unit">Per lb</p>
+                            </div>
+                        </div>
+                        <div class="item-price">$2.99</div>
+                        <div class="item-quantity">
+                            <div class="quantity-control">
+                                <button>-</button>
+                                <input type="text" value="2">
+                                <button>+</button>
+                            </div>
+                        </div>
+                        <div class="item-total">$5.98</div>
+                        <button class="remove-item"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="product-details">
+                            <img src="https://images.unsplash.com/photo-1550258987-190a2347bba7?q=80&w=1887&auto=format&fit=crop" alt="Pineapples" class="product-image">
+                            <div>
+                                <h3 class="product-name">Sweet Pineapples</h3>
+                                <p class="product-unit">Per each</p>
+                            </div>
+                        </div>
+                        <div class="item-price">$3.50</div>
+                        <div class="item-quantity">
+                            <div class="quantity-control">
+                                <button>-</button>
+                                <input type="text" value="1">
+                                <button>+</button>
+                            </div>
+                        </div>
+                        <div class="item-total">$3.50</div>
+                        <button class="remove-item"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+
+                     <div class="cart-item no-border">
+                        <div class="product-details">
+                            <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?q=80&w=2069&auto=format&fit=crop" alt="Eggs" class="product-image">
+                            <div>
+                                <h3 class="product-name">Farm Fresh Eggs</h3>
+                                <p class="product-unit">Per dozen</p>
+                            </div>
+                        </div>
+                        <div class="item-price">$4.00</div>
+                        <div class="item-quantity">
+                            <div class="quantity-control">
+                                <button>-</button>
+                                <input type="text" value="1">
+                                <button>+</button>
+                            </div>
+                        </div>
+                        <div class="item-total">$4.00</div>
+                        <button class="remove-item"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+
+                    <div class="continue-shopping">
+                        <a href="#"><i class="fas fa-arrow-left"></i>Continue Shopping</a>
+                    </div>
+                </div>
+
+                <div class="order-summary-section">
+                    <div class="summary-card">
+                        <h2 class="summary-heading">Order Summary</h2>
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span>$13.48</span>
+                        </div>
+                        <div class="summary-row last-row">
+                            <span>Shipping</span>
+                            <span>$5.00</span>
+                        </div>
+                        <div class="summary-total">
+                            <div class="total-row">
+                                <span>Total</span>
+                                <span class="total-price">$18.48</span>
+                            </div>
+                        </div>
+                        <button class="checkout-button">
+                            Proceed to Checkout
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer-bottom">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-logo">FarmConnect</h3>
+                    <p>Freshness delivered from farm to business.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">For Farmers</a></li>
+                        <li><a href="#">For Buyers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+                 <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest products and offers.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2025 FarmConnect. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

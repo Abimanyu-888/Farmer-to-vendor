@@ -14,6 +14,7 @@ struct farmer_data {
     std::string password;
     std::vector<std::string> products;
     std::vector<std::string> orders;
+    std::string state;
     
     farmer_data(const std::string& thename,const std::string& theusername,const std::string& theemail,const std::string& thepassword):
     name(thename),
@@ -33,16 +34,13 @@ struct buyer_data {
     std::string email;
     std::string password;
     std::vector<std::string> orders;
-    bool isEmpty = true;
     
-    buyer_data() = default;
     
     buyer_data(const std::string& thename,const std::string& theusername,const std::string& theemail,const std::string& thepassword):
     name(thename), 
     username(theusername),
     email(theemail),
-    password(thepassword),
-    isEmpty(false) {}
+    password(thepassword){}
 };
 struct buyer_link{
     buyer_data* data=nullptr;
@@ -58,9 +56,7 @@ struct product_data {
     int stock = 0;
     std::string unit;
     std::string about;
-    bool isEmpty = true;
-    
-    product_data() = default;
+
     
     product_data(const std::string& theproduct_id,const std::string& thename,const std::string& thecategory,const std::string& theowner,int theprice,int totalstock,const std::string& theunit,const std::string& theabout):
     product_id(theproduct_id), 
@@ -70,8 +66,7 @@ struct product_data {
     price(theprice), 
     stock(totalstock),
     unit(theunit), 
-    about(theabout),
-    isEmpty(false) {}
+    about(theabout){}
 };
 struct product_link{
     product_data* data=nullptr;
@@ -128,7 +123,7 @@ class hash_tables{
         json data;
         
         file>>data;
-        for(const auto& user:data){
+        for(const auto& user:data){     
             uint32_t index=fnv1a(user["username"])%size;
             farmer_data* new_user=new farmer_data(user["name"],user["username"],user["email"],user["password"]);
             farmer_link* newnode=new farmer_link;
@@ -387,6 +382,7 @@ public:
         for(int i=0;i<size;i++){
             farmer_link* curr1=farmers[i];
             while(curr1){
+
                 farmer_link* next=curr1->next;
                 delete curr1->data;
                 delete curr1;
@@ -432,4 +428,5 @@ public:
         delete[] email_username;
     }
 };
+
 #endif

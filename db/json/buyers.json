@@ -4,13 +4,15 @@
         "username":"buyer001",
         "email":"buyer1@gmail.com",
         "password":"abimanyu",
-        "orders":["order001"]
+        "orders":["order001"],
+        "state":"tamilnadu"
     },
     {
         "name": "yuvraj",
         "username":"buyer002",
         "email":"buyer2@gmail.com",
         "password":"abimanyu",
-        "orders":["order002"]
+        "orders":["order002"],
+        "state":"tamilnadu"
     }
 ]
