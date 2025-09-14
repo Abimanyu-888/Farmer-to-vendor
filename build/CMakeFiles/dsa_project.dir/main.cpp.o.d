@@ -1,7 +1,7 @@
 CMakeFiles/dsa_project.dir/main.cpp.o: \
   /Users/macbookm2/Downloads/programming/projects/Farmer-to-vendor/main.cpp \
-  /Users/macbookm2/crow/Crow/include/crow.h \
-  /Users/macbookm2/crow/Crow/include/crow/query_string.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/query_string.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site \
@@ -794,12 +794,12 @@ CMakeFiles/dsa_project.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/stack.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
-  /Users/macbookm2/crow/Crow/include/crow/http_parser_merged.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/http_parser_merged.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
-  /Users/macbookm2/crow/Crow/include/crow/common.h \
-  /Users/macbookm2/crow/Crow/include/crow/utility.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/common.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/utility.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/sstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/random \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/bernoulli_distribution.h \
@@ -852,7 +852,7 @@ CMakeFiles/dsa_project.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/student_t_distribution.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_random_bit_generator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/weibull_distribution.h \
-  /Users/macbookm2/crow/Crow/include/crow/settings.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/settings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
@@ -872,9 +872,9 @@ CMakeFiles/dsa_project.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
-  /Users/macbookm2/crow/Crow/include/crow/ci_map.h \
-  /Users/macbookm2/crow/Crow/include/crow/TinySHA1.hpp \
-  /Users/macbookm2/crow/Crow/include/crow/socket_adaptors.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/ci_map.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/TinySHA1.hpp \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/socket_adaptors.h \
   /opt/homebrew/opt/asio/include/asio.hpp \
   /opt/homebrew/opt/asio/include/asio/any_completion_executor.hpp \
   /opt/homebrew/opt/asio/include/asio/detail/config.hpp \
@@ -1367,27 +1367,26 @@ CMakeFiles/dsa_project.dir/main.cpp.o: \
   /opt/homebrew/opt/asio/include/asio/writable_pipe.hpp \
   /opt/homebrew/opt/asio/include/asio/write_at.hpp \
   /opt/homebrew/opt/asio/include/asio/impl/write_at.hpp \
-  /Users/macbookm2/crow/Crow/include/crow/socket_acceptors.h \
-  /Users/macbookm2/crow/Crow/include/crow/logging.h \
-  /Users/macbookm2/crow/Crow/include/crow/json.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/json.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cfloat \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/float.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/float.h \
-  /Users/macbookm2/crow/Crow/include/crow/returnable.h \
-  /Users/macbookm2/crow/Crow/include/crow/mustache.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/returnable.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/logging.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/mustache.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream \
-  /Users/macbookm2/crow/Crow/include/crow/task_timer.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/task_timer.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree \
-  /Users/macbookm2/crow/Crow/include/crow/http_request.h \
-  /Users/macbookm2/crow/Crow/include/crow/websocket.h \
-  /Users/macbookm2/crow/Crow/include/crow/parser.h \
-  /Users/macbookm2/crow/Crow/include/crow/http_response.h \
-  /Users/macbookm2/crow/Crow/include/crow/mime_types.h \
-  /Users/macbookm2/crow/Crow/include/crow/multipart.h \
-  /Users/macbookm2/crow/Crow/include/crow/exceptions.h \
-  /Users/macbookm2/crow/Crow/include/crow/multipart_view.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/http_request.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/websocket.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/parser.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/http_response.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/mime_types.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/multipart.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/exceptions.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/multipart_view.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/charconv \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/chars_format.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/to_underlying.h \
@@ -1395,16 +1394,17 @@ CMakeFiles/dsa_project.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/from_chars_result.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/to_chars.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/to_chars_floating_point.h \
-  /Users/macbookm2/crow/Crow/include/crow/routing.h \
-  /Users/macbookm2/crow/Crow/include/crow/middleware.h \
-  /Users/macbookm2/crow/Crow/include/crow/middleware_context.h \
-  /Users/macbookm2/crow/Crow/include/crow/compression.h \
-  /Users/macbookm2/crow/Crow/include/crow/http_connection.h \
-  /Users/macbookm2/crow/Crow/include/crow/http_server.h \
-  /Users/macbookm2/crow/Crow/include/crow/version.h \
-  /Users/macbookm2/crow/Crow/include/crow/app.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/routing.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/middleware.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/middleware_context.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/compression.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/http_connection.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/http_server.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/version.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/app.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/condition_variable \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/stop_callback.h \
+  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/middlewares/cookie_parser.h \
   /Users/macbookm2/Downloads/programming/projects/Farmer-to-vendor/include/load.hpp \
   /Users/macbookm2/Downloads/programming/projects/Farmer-to-vendor/include/json.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/valarray

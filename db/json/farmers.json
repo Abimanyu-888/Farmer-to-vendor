@@ -2,7 +2,6 @@
     {
         "name": "abimanyu",
         "username":"farmer001",
-        "farm_name":"green vally farm",
         "email":"farmer1@gmail.com",
         "password":"abimanyu",
         "products":["product001","product002"],
@@ -13,7 +12,6 @@
     {
         "name": "yuvraj",
         "username":"farmer002",
-        "farm_name":"green vally farm",
         "email":"farmer2@gmail.com",
         "password":"abimanyu",
         "products":["product003"],

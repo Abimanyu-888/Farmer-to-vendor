@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD        17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS      OFF)
 
-set(INCLUDE_PATHS /opt/homebrew/opt/asio/include /Users/macbookm2/crow/Crow/include)
+set(INCLUDE_PATHS /opt/homebrew/opt/asio/include /opt/homebrew/Cellar/crow/1.2.1.2/include)
 
 add_executable(dsa_project main.cpp)
 
