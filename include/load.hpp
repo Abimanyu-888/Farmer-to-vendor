@@ -15,15 +15,14 @@ struct farmer_data {
     std::vector<std::string> products;
     std::vector<std::string> orders;
     std::string state;
-    int Total_Revenue;
+    int Total_Revenue=0;
     
     farmer_data(const std::string& thename,const std::string& theusername,const std::string& theemail,const std::string& thepassword,const std::string& thestate):
     name(thename),
     username(theusername),
     email(theemail), 
     password(thepassword),
-    state(thestate),
-    Total_Revenue(0)
+    state(thestate)
     {}
     farmer_data(const std::string& thename,const std::string& theusername,const std::string& theemail,const std::string& thepassword,const std::string& thestate,const int& theTotal_Revenue,const std::vector<std::string>& theproducts,const std::vector<std::string>& theorders):
     name(thename),
@@ -99,13 +98,9 @@ struct order_data {
     std::string order_id;
     std::string product_id;
     int quantity = 0;
-    bool isEmpty = true;
-    
-    order_data() = default;
-    
     order_data(const std::string& theorder_id,const std::string& theproduct_id,int thequantity):
     order_id(theorder_id), product_id(theproduct_id),
-    quantity(thequantity), isEmpty(false) {}
+    quantity(thequantity) {}
 };
 struct order_link{
     order_data* data=nullptr;

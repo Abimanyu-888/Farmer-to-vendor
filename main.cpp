@@ -30,7 +30,7 @@ int main() {
 
         crow::response res(303);
         if (user_type == "Farmer") {
-            res.add_header("Location", "/farmer");
+            res.add_header("Location", "/farmer/dashboard");
         } else {
             res.add_header("Location", "/buyer");
         }
@@ -42,32 +42,13 @@ int main() {
         return page.render();
     });
 
-    CROW_ROUTE(app, "/farmer")([&app](const crow::request& req) -> crow::response {
-        auto& session = app.get_context<Session>(req);
-        std::string user_type = session.get<std::string>("user_type");
-
-        // Authentication Check
-        if (user_type != "Farmer") {
-            crow::response res(303);
-            res.add_header("Location", "/landing_page");
-            return res;
-        }
-
-        std::string username = session.get<std::string>("username");
-        crow::mustache::context ctx;
-        ctx["username"] = username;
-        auto page = crow::mustache::load("farmer/farmer_dashboard.html");
-        return crow::response(page.render(ctx));
-    });
-
     CROW_ROUTE(app, "/buyer")([&app](const crow::request& req) -> crow::response {
         auto& session = app.get_context<Session>(req);
         std::string user_type = session.get<std::string>("user_type");
         
-        // Authentication Check
         if (user_type != "Buyer") {
             crow::response res(303);
-            res.add_header("Location", "/landing_page");
+            res.add_header("Location", "/error");
             return res;
         }
 
@@ -113,7 +94,7 @@ int main() {
 
             res.code = 303;
             if (type == "Farmer") {
-                res.add_header("Location", "/farmer");
+                res.add_header("Location", "/farmer/dashboard");
             } else {
                 res.add_header("Location", "/buyer");
             }
@@ -141,13 +122,11 @@ int main() {
         auto& session = app.get_context<Session>(req);
         session.set("username", username);
         session.set("user_type", type);
-
         res.code = 303;
         if (type == "Farmer") {
-            std::string farmname = req_body.get("farm_name");
             farmer_data* new_user = new farmer_data(name, username, email, pass, state);
             tables.addFarmer(new_user);
-            res.add_header("Location", "/farmer");
+            res.add_header("Location", "/farmer/dashboard");
         } else {
             buyer_data* new_user = new buyer_data(name, username, email, pass, state);
             tables.addBuyer(new_user);
@@ -172,6 +151,86 @@ int main() {
         res.code = 303;
         res.end();
     });
+
+
+    CROW_ROUTE(app, "/farmer/dashboard")([&app,&tables](const crow::request& req) -> crow::response {
+        auto& session = app.get_context<Session>(req);
+        std::string user_type = session.get<std::string>("user_type");
+
+        if (user_type != "Farmer") {
+            crow::response res(303);
+            res.add_header("Location", "/error");
+            return res;
+        }
+
+        std::string username = session.get<std::string>("username");
+        farmer_data* data = tables.findFarmer(username);
+        crow::mustache::context ctx;
+        ctx["username"] = username;
+        ctx["revenue"]=data->Total_Revenue;
+        ctx["pending_orders_count"]=data->orders.size();
+        ctx["products_count"]=data->products.size();
+
+        auto page = crow::mustache::load("farmer/farmer_dashboard.html");
+        return crow::response(page.render(ctx));
+    });
+
+    CROW_ROUTE(app, "/farmer/products")([&app](const crow::request& req ) -> crow::response {
+        auto& session = app.get_context<Session>(req);
+        std::string user_type = session.get<std::string>("user_type");
+
+        if (user_type != "Farmer") {
+            crow::response res(303);
+            res.add_header("Location", "/error");
+            return res;
+        }
+
+        auto page = crow::mustache::load("farmer/farmer_products.html");
+        return crow::response(page.render());
+    });
+
+    CROW_ROUTE(app,"/farmer/orders")([&app](const crow::request& req ) -> crow::response {
+        auto& session = app.get_context<Session>(req);
+        std::string user_type = session.get<std::string>("user_type");
+
+        if (user_type != "Farmer") {
+            crow::response res(303);
+            res.add_header("Location", "/error");
+            return res;
+        }
+
+        auto page = crow::mustache::load("farmer/farmer_orders.html");
+        return crow::response(page.render());
+    });
+
+    CROW_ROUTE(app,"/farmer/settings")([&app](const crow::request& req ) -> crow::response {
+        auto& session = app.get_context<Session>(req);
+        std::string user_type = session.get<std::string>("user_type");
+
+        if (user_type != "Farmer") {
+            crow::response res(303);
+            res.add_header("Location", "/error");
+            return res;
+        }
+
+        auto page = crow::mustache::load("farmer/farmer_settings.html");
+        return crow::response(page.render());
+    });
+
+    CROW_ROUTE(app,"/farmer/new_product")([&app](const crow::request& req ) -> crow::response {
+        auto& session = app.get_context<Session>(req);
+        std::string user_type = session.get<std::string>("user_type");
+
+        if (user_type != "Farmer") {
+            crow::response res(303);
+            res.add_header("Location", "/error");
+            return res;
+        }
+
+        auto page = crow::mustache::load("farmer/add_product.html");
+        return crow::response(page.render());
+    });
+
 
     app.bindaddr("0.0.0.0").port(18080).multithreaded().run();
 }

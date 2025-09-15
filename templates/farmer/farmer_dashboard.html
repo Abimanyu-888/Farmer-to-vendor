@@ -23,15 +23,15 @@
                     <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>
                     Dashboard
                 </a>
-                <a href="farmer/farmer_products.html" class="nav-link">
+                <a href="/farmer/products" class="nav-link">
                     <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" /></svg>
                     My Products
                 </a>
-                <a href="farmer/farmer_orders.html" class="nav-link">
+                <a href="/farmer/orders" class="nav-link">
                     <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" /></svg>
                     Orders
                 </a>
-                <a href="farmer/farmer_settings.html" class="nav-link">
+                <a href="/farmer/settings" class="nav-link">
                     <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>
                     Settings
                 </a>
@@ -46,7 +46,7 @@
                         <p class="header-subtitle">Here's what's happening on your farm today.</p>
                     </div>
                     <div class="header-action">
-                        <a href="add_product.html" class="btn btn-primary">
+                        <a href="/farmer/new_product" class="btn btn-primary">
                             <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
                             Add New Product
                         </a>
@@ -58,19 +58,18 @@
                         <div class="card-content">
                             <div>
                                 <p class="card-title">Total Revenue</p>
-                                <p class="card-value">$12,850</p>
+                                <p class="card-value">₹{{revenue}}</p>
                             </div>
                             <div class="card-icon-wrapper bg-green">
                                 <svg class="card-icon text-green" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.826-1.106-2.193 0-3.02C10.443 8.22 11.22 8 12 8c.768 0 1.536.219 2.158.659l.879.659" /></svg>
                             </div>
                         </div>
-                        <p class="card-footer text-green">+15.2% from last month</p>
                     </div>
                     <div class="stat-card">
                         <div class="card-content">
                             <div>
                                 <p class="card-title">Pending Orders</p>
-                                <p class="card-value">14</p>
+                                <p class="card-value">{{pending_orders_count}}</p>
                             </div>
                             <div class="card-icon-wrapper bg-yellow">
                                 <svg class="card-icon text-yellow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -82,25 +81,13 @@
                         <div class="card-content">
                             <div>
                                 <p class="card-title">Active Listings</p>
-                                <p class="card-value">28</p>
+                                <p class="card-value">{{products_count}}</p>
                             </div>
                             <div class="card-icon-wrapper bg-blue">
                                 <svg class="card-icon text-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" /><path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z" /></svg>
                             </div>
                         </div>
                         <p class="card-footer">Crops available for sale</p>
-                    </div>
-                    <div class="stat-card">
-                        <div class="card-content">
-                            <div>
-                                <p class="card-title">Unique Buyers</p>
-                                <p class="card-value">42</p>
-                            </div>
-                            <div class="card-icon-wrapper bg-indigo">
-                               <svg class="card-icon text-indigo" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-4.67c.12-.24.232-.487.34- .742m.34- .742a3.11 3.11 0 00-2.688-2.506l-.006-.003c-.018-.008-.036-.016-.055-.024a4.522 4.522 0 00-2.81-1.148c-1.551.06-3.033.533-4.25 1.397M4.5 9.562a4.5 4.5 0 109 0a4.5 4.5 0 00-9 0z" /></svg>
-                            </div>
-                        </div>
-                        <p class="card-footer">This month</p>
                     </div>
                 </div>
 
@@ -168,37 +155,27 @@
                                     <span class="stock-name">Tomatoes</span>
                                     <span class="stock-amount">450 kg / 1000 kg</span>
                                 </div>
-                                <div class="progress-bar-container">
-                                    <div class="progress-bar bg-green" style="width: 45%"></div>
-                                </div>
+
                             </div>
                             <div class="stock-item">
                                 <div class="stock-info">
                                     <span class="stock-name">Potatoes</span>
                                     <span class="stock-amount">1200 kg / 2500 kg</span>
                                 </div>
-                                <div class="progress-bar-container">
-                                    <div class="progress-bar bg-green" style="width: 48%"></div>
-                                </div>
                             </div>
                             <div class="stock-item">
                                 <div class="stock-info">
                                     <span class="stock-name">Organic Lettuce</span>
-                                    <span class="stock-amount text-red">80 units / 500 units</span>
+                                    <span class="stock-amount">80 units / 500 units</span>
                                 </div>
-                                <div class="progress-bar-container">
-                                    <div class="progress-bar bg-red" style="width: 16%"></div>
-                                </div>
-                                <p class="stock-alert">Low stock alert!</p>
+
                             </div>
                              <div class="stock-item">
                                 <div class="stock-info">
                                     <span class="stock-name">Carrots</span>
                                     <span class="stock-amount">850 kg / 1200 kg</span>
                                 </div>
-                                <div class="progress-bar-container">
-                                    <div class="progress-bar bg-yellow-dark" style="width: 71%"></div>
-                                </div>
+
                             </div>
                          </div>
                     </div>
