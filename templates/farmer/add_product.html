@@ -14,26 +14,23 @@
         <aside class="sidebar">
             <div class="sidebar-header">
                 <a href="#" class="logo-link">
-                    <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-                    </svg>
                     <span class="logo-text">FarmConnect</span>
                 </a>
             </div>
             <nav class="sidebar-nav">
-                <a href="farmer_dashboard.html" class="nav-link">
+                <a href="/farmer/dashboard" class="nav-link">
                     <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>
                     Dashboard
                 </a>
-                <a href="farmer_products.html" class="nav-link active">
+                <a href="/farmer/products" class="nav-link active">
                     <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" /></svg>
                     My Products
                 </a>
-                <a href="farmer_orders.html" class="nav-link">
+                <a href="/farmer/orders" class="nav-link">
                     <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" /></svg>
                     Orders
                 </a>
-                <a href="farmer_settings.html" class="nav-link">
+                <a href="/farmer/settings" class="nav-link">
                     <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>
                     Settings
                 </a>
@@ -41,7 +38,7 @@
         </aside>
 
         <main class="main-content">
-            <form class="product-form" action="#" method="POST">
+            <form class="product-form" action="/farmer/new_product" method="POST">
                 <header class="form-header">
                     <h1 class="form-title">Create a New Product</h1>
                     <p class="form-subtitle">Follow the steps below to add a new crop to your listings.</p>
@@ -57,22 +54,22 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="productName" class="form-label">Product Name</label>
-                                <input type="text" id="productName" name="productName" placeholder="e.g., Organic Shimla Apples" class="form-input">
+                                <input type="text" id="productName" name="productName" placeholder="e.g., Organic Shimla Apples" class="form-input" required>
                             </div>
                             <div class="form-group">
                                 <label for="category" class="form-label">Category</label>
-                                <select id="category" name="category" class="form-select">
-                                    <option>Select a category...</option>
-                                    <option>Fruit</option>
-                                    <option>Vegetable</option>
-                                    <option>Grain</option>
-                                    <option>Dairy</option>
-                                    <option>Root Vegetable</option>
+                                <select id="category" name="category" class="form-select" required>
+                                    <option value=""disabled selected>-- None --</option>
+                                    <option value="Fruit">Fruit</option>
+                                    <option value="Vegetable">Vegetable</option>
+                                    <option value="Grain">Grain</option>
+                                    <option value="Dairy">Dairy</option>
+                                    <option value="Root Vegetable">Root Vegetable</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="description" class="form-label">Description</label>
-                                <textarea id="description" name="description" rows="4" class="form-textarea" placeholder="Describe the product's quality, origin, and characteristics..."></textarea>
+                                <label for="about" class="form-label">Description</label>
+                                <textarea id="about" name="about" rows="4" class="form-textarea" placeholder="Describe the product's quality, origin, and characteristics..." required></textarea>
                             </div>
                         </div>
                     </div>
@@ -94,34 +91,34 @@
                             <h2 class="card-title">Pricing & Inventory</h2>
                         </div>
                         <div class="card-body form-grid">
-                            <div class="form-group">
-                                <label for="price" class="form-label">Price</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon">₹</span>
-                                    <input type="number" name="price" id="price" placeholder="150.00" class="input-group-input">
-                                    <select name="price_unit" class="input-group-select">
-                                        <option value="kg">/ kg</option>
-                                        <option value="lbs">/ lbs</option>
-                                        <option value="unit">/ unit</option>
-                                    </select>
-                                </div>
+                            <div class="form-group2">
+                                <label for="price" class="form-label">Price(in ₹)</label>
+                                <input type="number" id="price" name="price" placeholder="₹50" min="0" step="any" class="form-input" required>
                             </div>
-                            <div class="form-group">
+
+                            <div class="form-group2">
                                 <label for="stock" class="form-label">Available Stock</label>
-                                <div class="input-group">
-                                    <input type="number" name="stock" id="stock" placeholder="500" class="input-group-input rounded-l-only">
-                                    <select name="stock_unit" class="input-group-select">
-                                        <option value="kg">kg</option>
-                                        <option value="lbs">lbs</option>
-                                        <option value="units">units</option>
-                                    </select>
-                                </div>
+                                <input type="number" id="stock" name="stock" placeholder="50 units" min="0" step="any" class="form-input" required>
                             </div>
+
+                            <div class="form-group2">
+                                <label for="unit" class="form-label">Unit</label>
+                                <select name="unit" class="form-select" required>
+                                    <option value=""disabled selected>-- None --</option>
+                                    <option value="g">Gram (g)</option>
+                                    <option value="kg">Kilogram (kg)</option>
+                                    <option value="mg">Milligram (mg)</option>
+                                    <option value="lb">Pound (lb)</option>
+                                    <option value="oz">Ounce (oz)</option>
+                                    <option value="piece">Piece</option>        
+                                </select>
+                            </div>
+                            
                         </div>
                     </div>
                     
                     <div class="form-actions">
-                        <a href="farmer_products.html" class="btn btn-secondary">Cancel</a>
+                        <a href="/farmer/products" class="btn btn-secondary">Cancel</a>
                         <button type="submit" class="btn btn-primary">
                             <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" /></svg>
                             Save and Publish

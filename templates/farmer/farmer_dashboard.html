@@ -46,7 +46,7 @@
                         <p class="header-subtitle">Here's what's happening on your farm today.</p>
                     </div>
                     <div class="header-action">
-                        <a href="/farmer/new_product" class="btn btn-primary">
+                        <a href="/farmer/add_product" class="btn btn-primary">
                             <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
                             Add New Product
                         </a>
@@ -150,33 +150,17 @@
                     <div class="card stock-card">
                          <h2 class="card-section-title">Stock Levels</h2>
                          <div class="stock-items">
+                            {{#stock_list}}
                             <div class="stock-item">
                                 <div class="stock-info">
-                                    <span class="stock-name">Tomatoes</span>
-                                    <span class="stock-amount">450 kg / 1000 kg</span>
-                                </div>
-
-                            </div>
-                            <div class="stock-item">
-                                <div class="stock-info">
-                                    <span class="stock-name">Potatoes</span>
-                                    <span class="stock-amount">1200 kg / 2500 kg</span>
+                                    <span class="stock-name">{{name}}</span>
+                                    <span class="stock-amount">{{stock}} {{unit}}</span>
                                 </div>
                             </div>
-                            <div class="stock-item">
-                                <div class="stock-info">
-                                    <span class="stock-name">Organic Lettuce</span>
-                                    <span class="stock-amount">80 units / 500 units</span>
-                                </div>
-
-                            </div>
-                             <div class="stock-item">
-                                <div class="stock-info">
-                                    <span class="stock-name">Carrots</span>
-                                    <span class="stock-amount">850 kg / 1200 kg</span>
-                                </div>
-
-                            </div>
+                            {{/stock_list}}
+                            {{^stock_list}}
+                                <p>No products published right now.</p>
+                            {{/stock_list}}
                          </div>
                     </div>
                 </div>

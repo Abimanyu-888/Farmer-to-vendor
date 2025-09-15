@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/opt/homebrew/opt/asio/include -I/Users/macbookm2/crow/Crow/include
+CXX_INCLUDES = -I/opt/homebrew/opt/asio/include -I/Users/macbookm2/crow/Crow/include -I/opt/homebrew/Cellar/boost/1.89.0/include
 
 CXX_FLAGSarm64 = -std=c++17 -arch arm64
 

@@ -15,14 +15,15 @@ struct farmer_data {
     std::vector<std::string> products;
     std::vector<std::string> orders;
     std::string state;
-    int Total_Revenue=0;
+    int Total_Revenue;
     
     farmer_data(const std::string& thename,const std::string& theusername,const std::string& theemail,const std::string& thepassword,const std::string& thestate):
     name(thename),
     username(theusername),
     email(theemail), 
     password(thepassword),
-    state(thestate)
+    state(thestate),
+    Total_Revenue(0)
     {}
     farmer_data(const std::string& thename,const std::string& theusername,const std::string& theemail,const std::string& thepassword,const std::string& thestate,const int& theTotal_Revenue,const std::vector<std::string>& theproducts,const std::vector<std::string>& theorders):
     name(thename),
@@ -98,9 +99,13 @@ struct order_data {
     std::string order_id;
     std::string product_id;
     int quantity = 0;
+    bool isEmpty = true;
+    
+    order_data() = default;
+    
     order_data(const std::string& theorder_id,const std::string& theproduct_id,int thequantity):
     order_id(theorder_id), product_id(theproduct_id),
-    quantity(thequantity) {}
+    quantity(thequantity), isEmpty(false) {}
 };
 struct order_link{
     order_data* data=nullptr;
@@ -270,7 +275,7 @@ public:
         product_hashtable(size);
         order_hashtable(size);
     }
-    farmer_data* findFarmer(std::string& s){
+    farmer_data* findFarmer(std::string s){
         uint32_t index=fnv1a(s)%size;
         farmer_link* node=farmers[index];
         while(node){
@@ -279,7 +284,7 @@ public:
         }
         return nullptr;
     }
-    buyer_data* findBuyer(std::string& s){
+    buyer_data* findBuyer(std::string s){
         uint32_t index=fnv1a(s)%size;
         buyer_link* node=buyers[index];
         while(node){
@@ -288,7 +293,7 @@ public:
         }
         return nullptr;
     }
-    product_data* findProduct(std::string& s){
+    product_data* findProduct(std::string s){
         uint32_t index=fnv1a(s)%size;
         product_link* node=products[index];
         while(node){
@@ -297,7 +302,7 @@ public:
         }
         return nullptr;
     }
-    order_data* findOrder(std::string& s){
+    order_data* findOrder(std::string s){
         uint32_t index=fnv1a(s)%size;
         order_link* node=orders[index];
         while(node){
@@ -394,7 +399,22 @@ public:
         }
         return nullptr;
     }
-    
+    void delete_product(std::string id){
+        uint32_t index=fnv1a(id)%size;
+        product_link* node=products[index];
+        product_link* parent=nullptr;
+        while(node != nullptr && node->data->product_id!=id){
+            parent=node;
+            node=node->next;
+        }
+        if (node == nullptr) {
+            return; 
+        }
+        if(parent) parent->next=node->next;
+        else products[index]=node->next;
+        delete node->data;
+        delete node;
+    }   
     ~hash_tables(){
         for(int i=0;i<size;i++){
             farmer_link* curr1=farmers[i];

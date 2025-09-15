@@ -238,6 +238,10 @@ a {
 .product-card.is-out-of-stock .product-card-stock {
     color: var(--gray-500);
 }
+.product-card.is-out-of-stock .product-card-actions {
+    position: relative;
+    z-index: 11;
+}
 
 
 /* --- Responsive Design --- */
