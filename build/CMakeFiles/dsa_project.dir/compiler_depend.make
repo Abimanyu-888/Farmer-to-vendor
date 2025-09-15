@@ -729,6 +729,7 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/random \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ratio \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/set \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/sstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stack \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stddef.h \
@@ -746,6 +747,7 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/typeinfo \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_map \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/utility \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/valarray \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/variant \
@@ -950,37 +952,39 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   /Users/macbookm2/Downloads/programming/projects/Farmer-to-vendor/include/json.hpp \
   /Users/macbookm2/Downloads/programming/projects/Farmer-to-vendor/include/load.hpp \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/TinySHA1.hpp \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/app.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/ci_map.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/common.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/compression.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/exceptions.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/http_connection.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/http_parser_merged.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/http_request.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/http_response.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/http_server.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/json.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/logging.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/middleware.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/middleware_context.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/middlewares/cookie_parser.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/mime_types.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/multipart.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/multipart_view.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/mustache.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/parser.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/query_string.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/returnable.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/routing.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/settings.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/socket_adaptors.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/task_timer.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/utility.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/version.h \
-  /opt/homebrew/Cellar/crow/1.2.1.2/include/crow/websocket.h \
+  /Users/macbookm2/crow/Crow/include/crow.h \
+  /Users/macbookm2/crow/Crow/include/crow/TinySHA1.hpp \
+  /Users/macbookm2/crow/Crow/include/crow/app.h \
+  /Users/macbookm2/crow/Crow/include/crow/ci_map.h \
+  /Users/macbookm2/crow/Crow/include/crow/common.h \
+  /Users/macbookm2/crow/Crow/include/crow/compression.h \
+  /Users/macbookm2/crow/Crow/include/crow/exceptions.h \
+  /Users/macbookm2/crow/Crow/include/crow/http_connection.h \
+  /Users/macbookm2/crow/Crow/include/crow/http_parser_merged.h \
+  /Users/macbookm2/crow/Crow/include/crow/http_request.h \
+  /Users/macbookm2/crow/Crow/include/crow/http_response.h \
+  /Users/macbookm2/crow/Crow/include/crow/http_server.h \
+  /Users/macbookm2/crow/Crow/include/crow/json.h \
+  /Users/macbookm2/crow/Crow/include/crow/logging.h \
+  /Users/macbookm2/crow/Crow/include/crow/middleware.h \
+  /Users/macbookm2/crow/Crow/include/crow/middleware_context.h \
+  /Users/macbookm2/crow/Crow/include/crow/middlewares/cookie_parser.h \
+  /Users/macbookm2/crow/Crow/include/crow/middlewares/session.h \
+  /Users/macbookm2/crow/Crow/include/crow/mime_types.h \
+  /Users/macbookm2/crow/Crow/include/crow/multipart.h \
+  /Users/macbookm2/crow/Crow/include/crow/multipart_view.h \
+  /Users/macbookm2/crow/Crow/include/crow/mustache.h \
+  /Users/macbookm2/crow/Crow/include/crow/parser.h \
+  /Users/macbookm2/crow/Crow/include/crow/query_string.h \
+  /Users/macbookm2/crow/Crow/include/crow/returnable.h \
+  /Users/macbookm2/crow/Crow/include/crow/routing.h \
+  /Users/macbookm2/crow/Crow/include/crow/settings.h \
+  /Users/macbookm2/crow/Crow/include/crow/socket_acceptors.h \
+  /Users/macbookm2/crow/Crow/include/crow/socket_adaptors.h \
+  /Users/macbookm2/crow/Crow/include/crow/task_timer.h \
+  /Users/macbookm2/crow/Crow/include/crow/utility.h \
+  /Users/macbookm2/crow/Crow/include/crow/version.h \
+  /Users/macbookm2/crow/Crow/include/crow/websocket.h \
   /opt/homebrew/opt/asio/include/asio.hpp \
   /opt/homebrew/opt/asio/include/asio/any_completion_executor.hpp \
   /opt/homebrew/opt/asio/include/asio/any_completion_handler.hpp \
@@ -1412,8 +1416,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
   /opt/homebrew/opt/asio/include/asio/write_at.hpp
 
 
-/opt/homebrew/opt/asio/include/asio/write.hpp:
-
 /opt/homebrew/opt/asio/include/asio/windows/stream_handle.hpp:
 
 /opt/homebrew/opt/asio/include/asio/windows/overlapped_ptr.hpp:
@@ -1429,8 +1431,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 /opt/homebrew/opt/asio/include/asio/use_future.hpp:
 
 /opt/homebrew/opt/asio/include/asio/traits/static_query.hpp:
-
-/opt/homebrew/opt/asio/include/asio/traits/require_member.hpp:
 
 /opt/homebrew/opt/asio/include/asio/traits/require_free.hpp:
 
@@ -1458,9 +1458,9 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /opt/homebrew/opt/asio/include/asio/streambuf.hpp:
 
-/opt/homebrew/opt/asio/include/asio/strand.hpp:
-
 /opt/homebrew/opt/asio/include/asio/steady_timer.hpp:
+
+/opt/homebrew/opt/asio/include/asio/signal_set_base.hpp:
 
 /opt/homebrew/opt/asio/include/asio/signal_set.hpp:
 
@@ -1470,11 +1470,11 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /opt/homebrew/opt/asio/include/asio/readable_pipe.hpp:
 
+/opt/homebrew/opt/asio/include/asio/read_until.hpp:
+
 /opt/homebrew/opt/asio/include/asio/random_access_file.hpp:
 
 /opt/homebrew/opt/asio/include/asio/query.hpp:
-
-/opt/homebrew/opt/asio/include/asio/posix/descriptor_base.hpp:
 
 /opt/homebrew/opt/asio/include/asio/posix/descriptor.hpp:
 
@@ -1499,6 +1499,8 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 /opt/homebrew/opt/asio/include/asio/ip/unicast.hpp:
 
 /opt/homebrew/opt/asio/include/asio/ip/udp.hpp:
+
+/opt/homebrew/opt/asio/include/asio/ip/tcp.hpp:
 
 /opt/homebrew/opt/asio/include/asio/ip/network_v6.hpp:
 
@@ -1589,6 +1591,8 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 /opt/homebrew/opt/asio/include/asio/generic/raw_protocol.hpp:
 
 /opt/homebrew/opt/asio/include/asio/execution/occupancy.hpp:
+
+/opt/homebrew/opt/asio/include/asio/execution/mapping.hpp:
 
 /opt/homebrew/opt/asio/include/asio/execution/impl/bad_executor.ipp:
 
@@ -1706,10 +1710,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /opt/homebrew/opt/asio/include/asio/detail/is_buffer_sequence.hpp:
 
-/opt/homebrew/opt/asio/include/asio/detail/regex_fwd.hpp:
-
-/opt/homebrew/opt/asio/include/asio/detail/initiation_base.hpp:
-
 /opt/homebrew/opt/asio/include/asio/detail/initiate_defer.hpp:
 
 /opt/homebrew/opt/asio/include/asio/impl/thread_pool.ipp:
@@ -1717,10 +1717,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 /opt/homebrew/opt/asio/include/asio/detail/impl/throw_error.ipp:
 
 /opt/homebrew/opt/asio/include/asio/detail/impl/thread_context.ipp:
-
-/opt/homebrew/opt/asio/include/asio/recycling_allocator.hpp:
-
-/opt/homebrew/opt/asio/include/asio/detail/impl/strand_service.hpp:
 
 /opt/homebrew/opt/asio/include/asio/detail/impl/strand_executor_service.ipp:
 
@@ -1781,8 +1777,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 /opt/homebrew/opt/asio/include/asio/detail/cstdint.hpp:
 
 /opt/homebrew/opt/asio/include/asio/detail/cstddef.hpp:
-
-/opt/homebrew/opt/asio/include/asio/detail/config.hpp:
 
 /opt/homebrew/opt/asio/include/asio/detail/conditionally_enabled_mutex.hpp:
 
@@ -1870,8 +1864,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /opt/homebrew/opt/asio/include/asio/async_result.hpp:
 
-/opt/homebrew/opt/asio/include/asio/associator.hpp:
-
 /opt/homebrew/opt/asio/include/asio/ip/v6_only.hpp:
 
 /opt/homebrew/opt/asio/include/asio/associated_executor.hpp:
@@ -1898,49 +1890,65 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /opt/homebrew/opt/asio/include/asio.hpp:
 
-/opt/homebrew/opt/asio/include/asio/read_until.hpp:
+/Users/macbookm2/crow/Crow/include/crow/websocket.h:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/websocket.h:
+/Users/macbookm2/crow/Crow/include/crow/version.h:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/version.h:
+/Users/macbookm2/crow/Crow/include/crow/utility.h:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/task_timer.h:
+/opt/homebrew/opt/asio/include/asio/write.hpp:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/query_string.h:
+/Users/macbookm2/crow/Crow/include/crow/returnable.h:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/mustache.h:
+/opt/homebrew/opt/asio/include/asio/strand.hpp:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/multipart.h:
+/Users/macbookm2/crow/Crow/include/crow/query_string.h:
 
-/opt/homebrew/opt/asio/include/asio/signal_set_base.hpp:
+/Users/macbookm2/crow/Crow/include/crow/mustache.h:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/mime_types.h:
+/Users/macbookm2/crow/Crow/include/crow/multipart_view.h:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/middleware_context.h:
+/opt/homebrew/opt/asio/include/asio/detail/regex_fwd.hpp:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/middleware.h:
+/opt/homebrew/opt/asio/include/asio/detail/initiation_base.hpp:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/http_server.h:
+/Users/macbookm2/crow/Crow/include/crow/multipart.h:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/http_response.h:
+/Users/macbookm2/crow/Crow/include/crow/middlewares/cookie_parser.h:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/http_request.h:
+/opt/homebrew/opt/asio/include/asio/detail/config.hpp:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/http_parser_merged.h:
+/Users/macbookm2/crow/Crow/include/crow/middleware_context.h:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/exceptions.h:
+/opt/homebrew/opt/asio/include/asio/traits/require_member.hpp:
 
-/opt/homebrew/opt/asio/include/asio/ip/tcp.hpp:
+/Users/macbookm2/crow/Crow/include/crow/middleware.h:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/compression.h:
+/Users/macbookm2/crow/Crow/include/crow/logging.h:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/common.h:
+/Users/macbookm2/crow/Crow/include/crow/http_request.h:
 
-/opt/homebrew/opt/asio/include/asio/execution/mapping.hpp:
+/opt/homebrew/opt/asio/include/asio/posix/descriptor_base.hpp:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/ci_map.h:
+/Users/macbookm2/crow/Crow/include/crow/http_parser_merged.h:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow.h:
+/Users/macbookm2/crow/Crow/include/crow/http_connection.h:
+
+/opt/homebrew/opt/asio/include/asio/associator.hpp:
+
+/Users/macbookm2/crow/Crow/include/crow/compression.h:
+
+/opt/homebrew/opt/asio/include/asio/recycling_allocator.hpp:
+
+/opt/homebrew/opt/asio/include/asio/detail/impl/strand_service.hpp:
+
+/Users/macbookm2/crow/Crow/include/crow/ci_map.h:
+
+/Users/macbookm2/crow/Crow/include/crow/app.h:
+
+/Users/macbookm2/crow/Crow/include/crow/TinySHA1.hpp:
+
+/Users/macbookm2/crow/Crow/include/crow.h:
 
 /opt/homebrew/opt/asio/include/asio/basic_writable_pipe.hpp:
 
@@ -2030,8 +2038,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /opt/homebrew/opt/asio/include/asio/detail/impl/handler_tracking.ipp:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/http_connection.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_useconds_t.h:
 
 /opt/homebrew/opt/asio/include/asio/traits/execute_member.hpp:
@@ -2070,9 +2076,9 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rune_t.h:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/socket_adaptors.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_pid_t.h:
+
+/Users/macbookm2/crow/Crow/include/crow/json.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_o_sync.h:
 
@@ -2122,6 +2128,8 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /opt/homebrew/opt/asio/include/asio/detail/base_from_cancellation_state.hpp:
 
+/Users/macbookm2/crow/Crow/include/crow/settings.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_errno_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h:
@@ -2160,6 +2168,10 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/__endian.h:
 
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/string.h:
+
 /opt/homebrew/opt/asio/include/asio/detail/strand_service.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/stop_state.h:
@@ -2189,6 +2201,8 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ios/fpos.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/signal.h:
+
+/Users/macbookm2/crow/Crow/include/crow/http_server.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_types.h:
 
@@ -2276,8 +2290,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /opt/homebrew/opt/asio/include/asio/write_at.hpp:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/app.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iosfwd:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino_t.h:
@@ -2291,6 +2303,8 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/unwrap_range.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/functional:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/set:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/math.h:
 
@@ -2312,8 +2326,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/execution:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/returnable.h:
-
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg___va_copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/unique_copy.h:
@@ -2331,8 +2343,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 /opt/homebrew/opt/asio/include/asio/impl/connect_pipe.ipp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdio:
-
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/utility.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdint:
 
@@ -2514,8 +2524,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_referenceable.h:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/json.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ostream/basic_ostream.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/net/if_var.h:
@@ -2548,6 +2556,8 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_nothrow_destructible.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_nothrow_assignable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_member_pointer.h:
@@ -2577,8 +2587,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/streambuf:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/make_signed.h:
-
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/settings.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_floating_point.h:
 
@@ -2631,6 +2639,8 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/invoke.h:
 
 /opt/homebrew/opt/asio/include/asio/ip/basic_resolver_iterator.hpp:
+
+/Users/macbookm2/crow/Crow/include/crow/socket_adaptors.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/is_heap.h:
 
@@ -3108,13 +3118,13 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/ostreambuf_iterator.h:
 
+/Users/macbookm2/crow/Crow/include/crow/mime_types.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_trivial.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/find_segment_if.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__condition_variable/condition_variable.h:
-
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/parser.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/iterator_traits.h:
 
@@ -3159,8 +3169,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/default_sentinel.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map:
-
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/routing.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/data.h:
 
@@ -3243,6 +3251,8 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/formatter.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/reverse_access.h:
+
+/Users/macbookm2/crow/Crow/include/crow/task_timer.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/totally_ordered.h:
 
@@ -3372,6 +3382,8 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/uniform_real_distribution.h:
 
+/Users/macbookm2/crow/Crow/include/crow/common.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/seed_seq.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/concepts.h:
@@ -3383,6 +3395,8 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/for_each_segment.h:
 
 /opt/homebrew/opt/asio/include/asio/traits/static_require.hpp:
+
+/Users/macbookm2/crow/Crow/include/crow/http_response.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_literal_type.h:
 
@@ -3514,8 +3528,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__undef_macros:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/TinySHA1.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/relation.h:
 
 /opt/homebrew/opt/asio/include/asio/detail/timer_queue_base.hpp:
@@ -3596,6 +3608,8 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /opt/homebrew/opt/asio/include/asio/executor.hpp:
 
+/Users/macbookm2/crow/Crow/include/crow/routing.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/tuple_like_no_subrange.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/from_chars_integral.h:
@@ -3631,8 +3645,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__mbstate_t.h:
 
 /opt/homebrew/opt/asio/include/asio/detail/impl/posix_thread.ipp:
-
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/multipart_view.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/includes.h:
 
@@ -3784,8 +3796,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/reverse_copy.h:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/middlewares/cookie_parser.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_all_extents.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/unique.h:
@@ -3842,10 +3852,6 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/byte.h:
 
-/Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/string.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/compare:
@@ -3867,6 +3873,8 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/allocator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_abstract.h:
+
+/Users/macbookm2/crow/Crow/include/crow/socket_acceptors.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/abi.h:
 
@@ -4082,15 +4090,17 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__compare/common_comparison_category.h:
 
-/opt/homebrew/Cellar/crow/1.2.1.2/include/crow/logging.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/math.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/ranlux.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/invert_if.h:
 
+/Users/macbookm2/crow/Crow/include/crow/exceptions.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_volatile.h:
+
+/Users/macbookm2/crow/Crow/include/crow/parser.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_va_list.h:
 
@@ -4225,6 +4235,8 @@ CMakeFiles/dsa_project.dir/main.cpp.o: /Users/macbookm2/Downloads/programming/pr
 /opt/homebrew/opt/asio/include/asio/deadline_timer.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/check_memory_order.h:
+
+/Users/macbookm2/crow/Crow/include/crow/middlewares/session.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdlib.h:
 

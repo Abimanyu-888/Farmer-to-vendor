@@ -22,7 +22,8 @@ struct farmer_data {
     username(theusername),
     email(theemail), 
     password(thepassword),
-    state(thestate)
+    state(thestate),
+    Total_Revenue(0)
     {}
     farmer_data(const std::string& thename,const std::string& theusername,const std::string& theemail,const std::string& thepassword,const std::string& thestate,const int& theTotal_Revenue,const std::vector<std::string>& theproducts,const std::vector<std::string>& theorders):
     name(thename),
