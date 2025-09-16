@@ -5,7 +5,7 @@
         "category":"fruit",
         "owner":"farmer001",
         "price":50,
-        "stock":120,
+        "stock":0,
         "unit":"kg",
         "about":"Fresh"
     },

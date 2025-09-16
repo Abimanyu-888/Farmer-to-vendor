@@ -1,1 +1,1 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/dsa_project.dir/main.cpp.o -o dsa_project
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/dsa_project.dir/main.cpp.o CMakeFiles/dsa_project.dir/src/helper.cpp.o -o dsa_project

@@ -7,9 +7,9 @@
 #include <vector>
 #include <string>
 #include <any> 
-#include <boost/uuid/uuid.hpp>
-#include <boost/uuid/uuid_generators.hpp>
-#include <boost/uuid/uuid_io.hpp>
+#include "include/helper.hpp"
+#include <fstream> 
+#include <filesystem>
 
 using Session = crow::SessionMiddleware<crow::InMemoryStore>;
 
@@ -204,13 +204,15 @@ int main() {
         crow::json::wvalue::list product_list;
         for(auto& prod_id:data->products){
             product_data* prod_data=tables.findProduct(prod_id);
+            bool is_in_stock = (prod_data->stock > 0);
             product_list.emplace_back(crow::json::wvalue{
                 {"name", prod_data->product_name}, 
                 {"stock", prod_data->stock},
                 {"unit",prod_data->unit},
                 {"category",prod_data->category},
                 {"price",prod_data->price},
-                {"id",prod_data->product_id}
+                {"id",prod_data->product_id},
+                {"is_in_stock", is_in_stock}
             });
         }
         ctx["product_list"]=std::move(product_list);
@@ -278,20 +280,18 @@ int main() {
         std::string username = session.get<std::string>("username");
 
         auto req_body = crow::query_string(("?" + req.body).c_str());
-        boost::uuids::random_generator gen;
-        boost::uuids::uuid id = gen();
-        std::string id_str = boost::uuids::to_string(id);
+        std::string id = generate_product_id();
         std::string name=req_body.get("productName");
         std::string category=req_body.get("category");
         int price=std::stoi(req_body.get("price"));
         int stock=std::stoi(req_body.get("stock"));
         std::string unit=req_body.get("unit");
         std::string about=req_body.get("about");
-        product_data* new_data=new product_data(id_str,name,category,username,price,stock,unit,about);
+        product_data* new_data=new product_data(id,name,category,username,price,stock,unit,about);
         tables.addProduct(new_data);
 
         farmer_data* update_Farmerdata = tables.findFarmer(username);
-        update_Farmerdata->products.push_back(id_str);
+        update_Farmerdata->products.push_back(id);
 
         crow::response res;
         res.code = 302;
@@ -341,9 +341,27 @@ int main() {
         return res;
     });
     
-    CROW_ROUTE(app, "/edit_product_post/{{id}}").methods("POST"_method)([&app,&tables](const crow::request& req) -> crow::response {
-        auto page = crow::mustache::load("error.html");
-        return crow::response(page.render());
+    CROW_ROUTE(app, "/farmer/edit_product_post/<string>").methods("POST"_method)([&app,&tables](const crow::request& req,const std::string& id) -> crow::response {
+        auto& session = app.get_context<Session>(req);
+        std::string user_type = session.get<std::string>("user_type");
+
+        if (user_type != "Farmer") {
+            crow::response res(303);
+            res.add_header("Location", "/error");
+            return res;
+        }
+        auto req_body = crow::query_string(("?" + req.body).c_str());
+        product_data* data=tables.findProduct(id);
+        data->product_name=req_body.get("productName");
+        data->category=req_body.get("category");
+        data->about=req_body.get("about");
+        data->price=std::stoi(req_body.get("price"));
+        data->stock=std::stoi(req_body.get("stock"));
+        data->unit=req_body.get("unit");
+
+        crow::response res(303); 
+        res.add_header("Location", "/farmer/products");
+        return res;
     });
 
     app.bindaddr("0.0.0.0").port(18080).multithreaded().run();

@@ -6,11 +6,11 @@ set(CMAKE_CXX_STANDARD        17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS      OFF)
 
-set(INCLUDE_PATHS /opt/homebrew/opt/asio/include /Users/macbookm2/crow/Crow/include /opt/homebrew/Cellar/boost/1.89.0/include)
+set(INCLUDE_PATHS /opt/homebrew/opt/asio/include /Users/macbookm2/crow/Crow/include )
 
-add_executable(dsa_project main.cpp)
+add_executable(dsa_project main.cpp src/helper.cpp)
 
-target_include_directories(dsa_project PUBLIC ${INCLUDE_PATHS})
+target_include_directories(dsa_project PUBLIC ${INCLUDE_PATHS} include)
 
 
 # On some toolchains you must link the filesystem library manually
