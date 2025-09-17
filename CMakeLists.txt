@@ -1,19 +1,22 @@
-cmake_minimum_required(VERSION 4.0.3)
+cmake_minimum_required(VERSION 3.10)
 project(dsa_project)
 
 # Require C++17
-set(CMAKE_CXX_STANDARD        17)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS      OFF)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-set(INCLUDE_PATHS /opt/homebrew/opt/asio/include /Users/macbookm2/crow/Crow/include )
+# Find the Asio and Crow libraries from the paths set during the build
+find_path(ASIO_INCLUDE_DIR NAMES asio.hpp PATHS "${CMAKE_PREFIX_PATH}")
+find_path(CROW_INCLUDE_DIR NAMES crow.h PATHS "${CMAKE_PREFIX_PATH}")
 
-add_executable(dsa_project main.cpp src/helper.cpp)
+# Add the executable
+add_executable(dsa_project main.cpp)
 
-target_include_directories(dsa_project PUBLIC ${INCLUDE_PATHS} include)
+# Include directories
+target_include_directories(dsa_project PUBLIC ${ASIO_INCLUDE_DIR} ${CROW_INCLUDE_DIR})
 
-
-# On some toolchains you must link the filesystem library manually
+# Link libraries if necessary (e.g., for filesystem on some compilers)
 if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     target_link_libraries(dsa_project PRIVATE stdc++fs)
 endif()
