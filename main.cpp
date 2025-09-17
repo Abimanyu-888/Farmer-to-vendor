@@ -21,6 +21,11 @@ int main() {
 
     app.get_middleware<Session>();
 
+    CROW_ROUTE(app, "/db/images/<string>")([](const crow::request&, crow::response& res, const std::string& filename) {
+        res.set_static_file_info("db/images/" + filename);
+        res.end();
+    });
+
     CROW_ROUTE(app, "/")([&app](const crow::request& req) -> crow::response {
         auto& session = app.get_context<Session>(req);
         std::string user_type = session.get<std::string>("user_type");
@@ -205,6 +210,7 @@ int main() {
         for(auto& prod_id:data->products){
             product_data* prod_data=tables.findProduct(prod_id);
             bool is_in_stock = (prod_data->stock > 0);
+            std::string thepath = "/db/images/" + prod_id;
             product_list.emplace_back(crow::json::wvalue{
                 {"name", prod_data->product_name}, 
                 {"stock", prod_data->stock},
@@ -212,7 +218,8 @@ int main() {
                 {"category",prod_data->category},
                 {"price",prod_data->price},
                 {"id",prod_data->product_id},
-                {"is_in_stock", is_in_stock}
+                {"is_in_stock", is_in_stock},
+                {"file_path",thepath + prod_data->img_extension}
             });
         }
         ctx["product_list"]=std::move(product_list);
@@ -278,20 +285,46 @@ int main() {
             return res;
         }
         std::string username = session.get<std::string>("username");
-
-        auto req_body = crow::query_string(("?" + req.body).c_str());
+        crow::multipart::message msg(req);
         std::string id = generate_product_id();
-        std::string name=req_body.get("productName");
-        std::string category=req_body.get("category");
-        int price=std::stoi(req_body.get("price"));
-        int stock=std::stoi(req_body.get("stock"));
-        std::string unit=req_body.get("unit");
-        std::string about=req_body.get("about");
-        product_data* new_data=new product_data(id,name,category,username,price,stock,unit,about);
+        std::string name = msg.get_part_by_name("productName").body;
+        std::string category = msg.get_part_by_name("category").body;
+        int price = std::stoi(msg.get_part_by_name("price").body);
+        int stock = std::stoi(msg.get_part_by_name("stock").body);
+        std::string unit = msg.get_part_by_name("unit").body;
+        std::string about = msg.get_part_by_name("about").body;
+
+        const auto& file_part = msg.get_part_by_name("file-upload");
+    
+        std::string disposition = "";
+        auto it = file_part.headers.find("Content-Disposition");
+        if (it != file_part.headers.end()) {
+            disposition = it->second.value; 
+        }
+
+        std::string original_filename;
+        size_t filename_pos = disposition.find("filename=\"");
+        if (filename_pos != std::string::npos) {
+            filename_pos += 10; // Move past 'filename="'
+            size_t filename_end_pos = disposition.find("\"", filename_pos);
+            if (filename_end_pos != std::string::npos) {
+                original_filename = disposition.substr(filename_pos, filename_end_pos - filename_pos);
+            }
+        }
+
+        std::string extension = std::filesystem::path(original_filename).extension().string();
+        std::string save_path = "db/images/" + id + extension;
+
+        std::ofstream out_file(save_path, std::ios::binary);
+        out_file.write(file_part.body.data(), file_part.body.size());
+        out_file.close();
+
+
+        product_data* new_data=new product_data(id,name,category,username,price,stock,unit,about,extension);
         tables.addProduct(new_data);
 
-        farmer_data* update_Farmerdata = tables.findFarmer(username);
-        update_Farmerdata->products.push_back(id);
+        farmer_data* product_to_delete = tables.findFarmer(username);
+        product_to_delete->products.push_back(id);
 
         crow::response res;
         res.code = 302;
@@ -316,7 +349,7 @@ int main() {
         ctx["price"]=data->price;
         ctx["unit"]=data->unit;
         ctx["stock"]=data->stock;
-
+        ctx["extention"]=data->img_extension;
 
         auto page = crow::mustache::load("farmer/edit_product.html");
         return crow::response(page.render(ctx));
@@ -332,8 +365,26 @@ int main() {
         }
 
         std::string username = session.get<std::string>("username");
-        farmer_data* update_Farmerdata = tables.findFarmer(username);
-        update_Farmerdata->products.erase(std::remove(update_Farmerdata->products.begin(), update_Farmerdata->products.end(), id), update_Farmerdata->products.end());
+        farmer_data* product_to_delete = tables.findFarmer(username);
+
+        product_data* product=tables.findProduct(id);
+        if (product_to_delete) {
+        std::string image_filename = product->img_extension;
+
+        // 2. Check if there is an image filename associated with the product
+        std::string file_path = "db/images/" + id ;
+
+        // 3. Use std::filesystem::remove to delete the file
+        std::error_code ec;
+        std::filesystem::remove(file_path, ec);
+
+        if (ec) {
+            // Optional: Log an error if the file couldn't be removed
+            CROW_LOG_ERROR << "Failed to delete image file: " << file_path << " - " << ec.message();
+        }
+    }
+
+        product_to_delete->products.erase(std::remove(product_to_delete->products.begin(), product_to_delete->products.end(), id), product_to_delete->products.end());
         tables.delete_product(id);
         crow::response res;
         res.code = 302;
@@ -350,14 +401,42 @@ int main() {
             res.add_header("Location", "/error");
             return res;
         }
-        auto req_body = crow::query_string(("?" + req.body).c_str());
+        crow::multipart::message msg(req);
         product_data* data=tables.findProduct(id);
-        data->product_name=req_body.get("productName");
-        data->category=req_body.get("category");
-        data->about=req_body.get("about");
-        data->price=std::stoi(req_body.get("price"));
-        data->stock=std::stoi(req_body.get("stock"));
-        data->unit=req_body.get("unit");
+        data->product_name=msg.get_part_by_name("productName").body;
+        data->category=msg.get_part_by_name("category").body;
+        data->about=msg.get_part_by_name("about").body;
+        data->price= std::stoi(msg.get_part_by_name("price").body);
+        data->stock=std::stoi(msg.get_part_by_name("stock").body);
+        data->unit=msg.get_part_by_name("unit").body;
+
+        const auto& file_part = msg.get_part_by_name("file-upload");
+    
+        std::string disposition = "";
+        auto it = file_part.headers.find("Content-Disposition");
+        if (it != file_part.headers.end()) {
+            disposition = it->second.value; 
+        }
+
+        std::string original_filename;
+        size_t filename_pos = disposition.find("filename=\"");
+        if (filename_pos != std::string::npos) {
+            filename_pos += 10; // Move past 'filename="'
+            size_t filename_end_pos = disposition.find("\"", filename_pos);
+            if (filename_end_pos != std::string::npos) {
+                original_filename = disposition.substr(filename_pos, filename_end_pos - filename_pos);
+            }
+        }
+
+        std::string extension = std::filesystem::path(original_filename).extension().string();
+        std::string new_filename = id + extension;
+        std::string save_path = "db/images/" + new_filename;
+
+        std::ofstream out_file(save_path, std::ios::binary);
+        out_file.write(file_part.body.data(), file_part.body.size());
+        out_file.close();
+
+        data->img_extension=extension;
 
         crow::response res(303); 
         res.add_header("Location", "/farmer/products");

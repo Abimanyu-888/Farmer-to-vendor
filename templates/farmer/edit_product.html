@@ -38,7 +38,7 @@
         </aside>
 
         <main class="main-content">
-            <form class="product-form" action="/farmer/edit_product_post/{{id}}" method="POST">
+            <form class="product-form" action="/farmer/edit_product_post/{{id}}" method="POST" enctype="multipart/form-data">
                 <header class="form-header">
                     <h1 class="form-title">Edit Product</h1>
                     <p class="form-subtitle">Update the details for your product below.</p>
@@ -80,7 +80,7 @@
                             <h2 class="card-title">Product Image</h2>
                         </div>
                         <div class="card-body">
-                            <img src="https://placehold.co/400x300/a3e635/ffffff?text=Tomatoes" alt="Current product image" class="product-image-preview">
+                            <img src="/db/images/{{id}}{{extention}}" alt="Current product image" class="product-image-preview">
                             <label for="file-upload" class="form-label">Upload a new image to replace the current one</label>
                             <input id="file-upload" name="file-upload" type="file" accept="image/*" class="form-file-input">
                         </div>

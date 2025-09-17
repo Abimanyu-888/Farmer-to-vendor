@@ -78,9 +78,9 @@ struct product_data {
     int stock = 0;
     std::string unit;
     std::string about;
-
+    std::string img_extension;
     
-    product_data(const std::string& theproduct_id,const std::string& thename,const std::string& thecategory,const std::string& theowner,int theprice,int totalstock,const std::string& theunit,const std::string& theabout):
+    product_data(const std::string& theproduct_id,const std::string& thename,const std::string& thecategory,const std::string& theowner,int theprice,int totalstock,const std::string& theunit,const std::string& theabout,const std::string& extension):
     product_id(theproduct_id), 
     product_name(thename),
     category(thecategory), 
@@ -88,7 +88,8 @@ struct product_data {
     price(theprice), 
     stock(totalstock),
     unit(theunit), 
-    about(theabout){}
+    about(theabout),
+    img_extension(extension){}
 };
 struct product_link{
     product_data* data=nullptr;
@@ -218,7 +219,7 @@ class hash_tables{
         file>>data;
         for(const auto& product:data){
             uint32_t index=fnv1a(product["product_id"])%size;
-            product_data* new_product=new product_data(product["product_id"],product["product_name"],product["category"],product["owner"],product["price"],product["stock"],product["unit"],product["about"]);
+            product_data* new_product=new product_data(product["product_id"],product["product_name"],product["category"],product["owner"],product["price"],product["stock"],product["unit"],product["about"],product["img_extension"]);
             product_link* newnode=new product_link;
             newnode->data=new_product;
             if(products[index]){

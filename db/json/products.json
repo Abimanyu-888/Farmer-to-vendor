@@ -7,7 +7,9 @@
         "price":50,
         "stock":0,
         "unit":"kg",
-        "about":"Fresh"
+        "about":"Fresh",
+        "img_extension":".webp"
+    
     },
     {
         "product_id":"product002",
@@ -17,7 +19,8 @@
         "price":250,
         "stock":120,
         "unit":"kg",
-        "about":"Fresh"
+        "about":"Fresh",
+        "img_extension":".webp"
 
     },
     {
@@ -28,6 +31,7 @@
         "price":40,
         "stock":12,
         "unit":"kg",
-        "about":"Fresh"
+        "about":"Fresh",
+        "img_extension":".webp"
     }
 ]
