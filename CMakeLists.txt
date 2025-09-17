@@ -14,7 +14,7 @@ find_path(CROW_INCLUDE_DIR NAMES crow.h PATHS "${CMAKE_PREFIX_PATH}")
 add_executable(dsa_project main.cpp src/helper.cpp)
 
 # Include directories
-target_include_directories(dsa_project PUBLIC ${ASIO_INCLUDE_DIR} ${CROW_INCLUDE_DIR} include)
+target_include_directories(dsa_project PUBLIC ${ASIO_INCLUDE_DIR} ${CROW_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # Link libraries if necessary (e.g., for filesystem on some compilers)
 if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
